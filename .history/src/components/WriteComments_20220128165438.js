@@ -67,10 +67,7 @@ export default function WriteComments() {
                   <h4 className="name">@amyrobson</h4>
                   <span className="time"> 1 Months ago</span>
                   <div className="btn">
-                    <button
-                      className="delete"
-                      onClick={() => handleDelete(value.id)}
-                    >
+                    <button className="delete" onClick={handleDelete}>
                       Delete
                     </button>
                     <button className="edit" onClick={handleEdit}>

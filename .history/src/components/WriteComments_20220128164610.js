@@ -14,10 +14,9 @@ export default function WriteComments() {
     if (input) {
       const myNewInput = {
         id: new Date().getTime().toString(),
-        name: input,
       };
       setComment((e) => {
-        return [...e, myNewInput];
+        return [...e, input];
         //not finished=========
       });
       setInput("");
@@ -29,7 +28,7 @@ export default function WriteComments() {
   // const key = new Date().getTime().toString();
 
   const handleDelete = (e) => {
-    console.log(e);
+    console.log(e.target);
   };
   const handleEdit = () => {};
 
@@ -59,18 +58,15 @@ export default function WriteComments() {
 
         {/* comments===== start========== */}
         <div className="comments">
-          {comment.map((value) => {
+          {comment.map((value, index) => {
             return (
-              <div className="shadow" key={value.id}>
+              <div className="shadow" key={index}>
                 <div className="profile-info">
                   <img src={avatar} alt="" className="random-img" />
                   <h4 className="name">@amyrobson</h4>
                   <span className="time"> 1 Months ago</span>
                   <div className="btn">
-                    <button
-                      className="delete"
-                      onClick={() => handleDelete(value.id)}
-                    >
+                    <button className="delete" onClick={handleDelete}>
                       Delete
                     </button>
                     <button className="edit" onClick={handleEdit}>
@@ -78,7 +74,7 @@ export default function WriteComments() {
                     </button>
                   </div>
                 </div>
-                <li className="single-comment">{value.name}</li>
+                <li className="single-comment">{value}</li>
               </div>
             );
           })}
