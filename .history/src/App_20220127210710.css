@@ -1,0 +1,22 @@
+.comment-section {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: rgb(0, 73, 231);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 10px;
+}
+.comment-section {
+  padding: 30px 50px;
+}
+img {
+  max-width: 80%;
+  margin-bottom: 25px;
+}
+textarea {
+  margin: 15px;
+}
